@@ -1,0 +1,10 @@
+<div data-sly-use.rs="ClibsTest.core.models.PageInformationModel"></div>
+${rs.path}
+<p>Title:${rs.pageInformation.title}</p>
+<p>Path:${rs.pageInformation.path}</p>
+
+    <p>All the page information</p>
+<ol data-sly-list = "${rs.pageInformation.childreninformation}">
+
+	<li>${item}</li>
+</ol>

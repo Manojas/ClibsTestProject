@@ -1,0 +1,22 @@
+<p>This is code test</p>
+<div data-sly-use.cd="ClibsTest.core.models.SlingTestInterface"></div>
+<ul data-sly-list.item="${cd.names}">
+<li>Names are:${item}</li>
+</ul>
+
+<h3>Path Node:${cd.pathBrowser}</h3>
+<h3>Nationality:${cd.isIndian}</h3>
+<h3>Gender: ${cd.gender}</h3>
+
+
+<div data-sly-include="examp.html"></div>
+<img src="${cd.fileReference}" width=600 height =350/>
+
+
+<h1 data-sly-test={cd.isIndian}>Since it is true it will Render</h1>
+<h1 data-sly-text="This is Data Sly Text">Statement</h1>
+<template data-sly-template.exe="${@ title, resource='Something'}">
+<h1>${title}</h1>
+<h1>${resource}</h1>
+</template>
+<div data-sly-call="${exe @ title='Title ', resource='something'}"></div>
